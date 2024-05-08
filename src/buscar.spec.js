@@ -25,4 +25,15 @@ describe("Buscar", () => {
         array.push("Proyecto3");
         expect(buscarProyecto("Proyecto2", array)).toEqual(["Proyecto2", "Proyecto2"]);
     });
+
+    // Encontrando proyectos cuyo nombre comienza con el criterio de busqueda
+    it("buscar y encontrar proyectos cuyo nombre comienza con el criterio de busqueda", () => { 
+        let array = [];
+        array.push("Proyecto1");
+        array.push("Proyecto2");
+        array.push("Tarea");
+        array.push("Tarea1");
+        array.push("Tarado");
+        expect(buscarProyecto("Ta", array)).toEqual(["Tarea", "Tarea1", "Tarado"]);
+    });
 });

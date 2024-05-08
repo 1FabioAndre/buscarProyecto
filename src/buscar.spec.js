@@ -8,4 +8,11 @@ describe("Buscar", () => {
         let array = [];
         expect(buscarProyecto("proyecto1", array)).toEqual("");
     });
+
+    // Encontrando un proyecto en una lista que solo contiene un proyecto
+    it("Encontrar un proyecto en una lista que solo contiene un proyecto", () => { 
+        let array = [];
+        array.push("Proyecto1")
+        expect(buscarProyecto("Proyecto1", array)).toEqual("Proyecto1");
+    });
 });

@@ -36,4 +36,17 @@ describe("Buscar", () => {
         array.push("Tarado");
         expect(buscarProyecto("Ta", array)).toEqual(["Tarea", "Tarea1", "Tarado"]);
     });
+
+
+    // prueba adicional de cobertura
+    // No encuentra la coincidencia en el array
+    it("Si no hay coincidencias devuelve una lista vacia", () => { 
+        let array = [];
+        array.push("Proyecto1");
+        array.push("Proyecto2");
+        array.push("Tarea");
+        array.push("Tarea1");
+        array.push("Tarado");
+        expect(buscarProyecto("BEBE", array)).toEqual([]);
+    });
 });

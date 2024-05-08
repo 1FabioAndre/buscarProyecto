@@ -1,4 +1,4 @@
-function buscarProyecto(proyecto="", array){
+function buscarProyecto(proyecto, array){
     let coincidencias = [];
     for(let i = 0; i < array.length; i++){
         if(array[i].startsWith(proyecto)){
